@@ -19,7 +19,7 @@ The below diagram depicts the high level architecture:
 
 The example pipelines have been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
 
-You can run also run the pipelines on a full [Kubeflow](https://www.kubeflow.org/) installation  or on a [standalone deployment of Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/installation/standalone-deployment/)
+You can run also run the pipelines on a full [Kubeflow](https://www.kubeflow.org/) installation  or on a [standalone deployment of Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/installation/standalone-deployment/).
 
 Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure **AI Platform Pipelines**.
 
