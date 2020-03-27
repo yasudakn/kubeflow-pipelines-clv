@@ -22,10 +22,17 @@ iam.googleapis.com \
 containerregistry.googleapis.com \
 containeranalysis.googleapis.com \
 automl.googleapis.com
- 
-
 ```
- 
+4. Add the **Cloud Build** service account to the **Project Editor** role. 
+```
+PROJECT_NUMBER=$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")
+CLOUD_BUILD_SERVICE_ACCOUNT="${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com"
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+  --member serviceAccount:$CLOUD_BUILD_SERVICE_ACCOUNT \
+  --role roles/editor
+```
+5. Create an instance of **AI Platform Pipelines**. Follow the [Setting up AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs/setting-up) how-to guide. Make sure to enable the access to *https://www.googleapis.com/auth/cloud-platform* when creating a GKE cluster.
+
 1. You can enable the services using **GCP Console** or by executing the `enable_apis.sh` script in the `/install` folder.
 1. Open a new session in **Cloud Shell**
 1. Create a working directory and clone this repo.
