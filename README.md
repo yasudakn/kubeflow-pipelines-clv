@@ -17,7 +17,7 @@ The below diagram depicts the high level architecture:
 
 ## Deploying Kubeflow Pipelines
 
-The guide has been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
+The example pipelines have been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
 
 You can run also run the pipelines on a full [Kubeflow](https://www.kubeflow.org/) installation  or on a [standalone deployment of Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/installation/standalone-deployment/)
 
