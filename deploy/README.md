@@ -6,14 +6,14 @@ Building and deploying of the pipelines and components have been automated using
 1. Create a docker image to support custom build steps
 1. Build the base image for the lightweigh Python helper components. The name of the image is provided as a build parameter.
 1. Build the image that hosts AutoML Tables components. The name of the image is provided as a build parameter.
-1. Update the YAML specifications of the AutoML Tables components with the names of the created images in the previous step
-1. Update the settings that control the pipelines' compilation. The values for these settings are provided as build parameters.
+1. Update the YAML specifications of the AutoML Tables components with the names of images the created  in the previous step.
+1. Update the settings that control compilation. The values for these settings are provided as build parameters.
 1. Compile the pipelines. 
 1. Deploy the compiled pipelines to a GCS location. The path to the location is provided as a build parameter.
 1. Deploy the artifacts used by the pipelines to a GCS location. The path to the location is provided as a build parameter.
 1. Deploy the component images to the Container Registry of your project. 
 1. Copy the sample dataset to a GCS location. The path to the location is provided as a build parameter.
-1. Deploy compiled pipelines to the KFP GKE cluster. The cluster name and location are provided as build parameters.
+1. Deploy compiled pipelines to the KFP GKE cluster. 
 
 
 ### Build parameters
@@ -30,8 +30,7 @@ _BUCKET_NAME | The name of a GCP bucket in your project to store compiled pipeli
 _PIPELINES_FOLDER | The name of the folder in _BUCKET_NAME to store the compiled pipelines
 _ARTIFACTS_FOLDER | The name of the folder in _BUCKET_NAME to store artificats used by the pipelines at running time. 
 _SAMPLE_DATASET_FOLDER | The name of the folder in _BUCKET_NAME to store the sample dataset used by the pipelines.
-_CLUSTER_NAME | The name of a KFP GKE cluster.
-_ZONE | The location of a KFP GKE cluster.
+_ENDPOINT | The endpoint to your AI Platform Pipelines instance.
 
 
 The `/cloud-build/build.sh` demonstrates how to use `gcloud builds submit` to start the build process. 
