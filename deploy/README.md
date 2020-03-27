@@ -39,7 +39,7 @@ The `/cloud-build/build.sh` demonstrates how to use `gcloud builds submit` to st
 To build and deploy the solution:
 1. Open [Cloud Shell](https://cloud.google.com/shell/docs/) in your project.
 2. Clone this repo.
-3. Update `build.sh` with your argument values.
+3. Update `build.sh` with your settings.
 4. Execute `build.sh`.
 
 
