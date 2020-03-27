@@ -59,9 +59,6 @@ steps:
     gsutil cp gs://clv-datasets/transactions/* gs://$_BUCKET_NAME/$_SAMPLE_DATASET_FOLDER 
   dir: 'pipelines'
 
-# Upload compiled pipelines to the KFP cluster
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['container', 'clusters', 'get-credentials', '$_CLUSTER_NAME', '--zone', '$_ZONE']
 
 - name: 'kfp-builder'
   args:
