@@ -15,12 +15,6 @@ The below diagram depicts the high level architecture:
 ![KFP Runtime](./images/arch-final.png)
 
 
-
-Refer to [README](./pipelines/README.md) in the `/pipelines` folder of this repo for more details on the design and usage of the training and deployment pipelines.
-
-Refer to [README](./components/automl_tables/README.md) in the `/components/automl_tables` folder of this repo for more details on the design and usage of the AutoML Tables components.
-
-
 ## Installing Kubeflow Pipelines
 
 The guide has been developed and tested on Kubeflow Pipelines on Google Cloud Platform Kubernetes Engine (GKE). 
