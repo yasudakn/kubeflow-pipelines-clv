@@ -25,7 +25,7 @@ Refer to [README](./install/README.md) in the `/install` folder of this repo for
 
 ## Building and deploying 
 
-The building and deploying of the solution components has been automated using **Cloud Build**. 
+The deployment of the example pipelines has been automated using **Cloud Build**. 
 
 Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed deployment instructions.
 
