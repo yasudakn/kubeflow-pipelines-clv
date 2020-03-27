@@ -1,8 +1,21 @@
 # Configuring AI Platform Pipelines
 
 1. Select or create a GCP project. You must be [Project Owner](https://cloud.google.com/iam/docs/understanding-roles) to complete the configuration.
-2. Enable Cloud Services utilzed by the pipelines:
+2. Enable Cloud Services utilzed by the pipelines. In addition to the services [enabled by default](https://cloud.google.com/service-usage/docs/enabled-service) you need to enable the following additional services:
 ```
+PROJECT_ID=[YOUR PROJECT ID]
+
+gcloud config set project $PROJECT_ID
+
+gcloud services enable \
+cloudbuild.googleapis.com \
+container.googleapis.com \
+cloudresourcemanager.googleapis.com \
+iam.googleapis.com \
+containerregistry.googleapis.com \
+containeranalysis.googleapis.com \
+automl.googleapis.com
+ 
 
 ```
    - Compute Engine
