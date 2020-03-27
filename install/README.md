@@ -1,16 +1,10 @@
-## Provisioning the infrastructure
+# Configuring AI Platform Pipelines
 
-The provisioning of the insfrastructure required to run the guide's pipelines has been automated with Terraform. The Terraform configuration in the `/terraform/` folder includes the provisioning and configuration of the following infrastructure components:
-- GKE cluster
-- Kubeflow Pipelines
-- Service Accounts used by GKE and KFP
-- Container Registry
-- Cloud Storage for the pipelines artifacts and sample datasets
+1. Select or create a GCP project. You must be [Project Owner](https://cloud.google.com/iam/docs/understanding-roles) to complete the configuration.
+2. Enable Cloud Services utilzed by the pipelines:
+```
 
-To provision the infrastructure:
-
-1. Select or create a GCP project
-1. Make sure that the following Cloud APIs are enabled:
+```
    - Compute Engine
    - Cloud Storage
    - Container Registry
