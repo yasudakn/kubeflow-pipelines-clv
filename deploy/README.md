@@ -13,7 +13,7 @@ Building and deploying of the pipelines and components have been automated using
 1. Deploy the artifacts used by the pipelines to a GCS location. The path to the location is provided as a build parameter.
 1. Deploy the component images to the Container Registry of your project. 
 1. Copy the sample dataset to a GCS location. The path to the location is provided as a build parameter.
-1. Deploy compiled pipelines to the KFP GKE cluster. 
+1. Deploy compiled pipelines to your AI Platform Pipelines instance. 
 
 
 ### Build parameters
