@@ -15,13 +15,13 @@ The below diagram depicts the high level architecture:
 ![KFP Runtime](./images/arch-final.png)
 
 
-## Installing Kubeflow Pipelines
+## Deploying Kubeflow Pipelines
 
-The guide has been developed and tested on Kubeflow Pipelines on Google Cloud Platform Kubernetes Engine (GKE). 
+The guide has been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
 
-You can run the solution on a full **Kubeflow** installation  or on a lightweight deployment that only includes core Kubeflow Pipelines services. The full Kubeflow installation can be provisioned following [the Kubeflow on GCP guide](https://www.kubeflow.org/docs/gke/deploy/). The lightweight Kubeflow Pipelines deployment can be performed using the automation script delivered as a part of the guide.
+You can run also run the pipelines on a full [Kubeflow](https://www.kubeflow.org/) installation  or on a [standalone deployment of Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/installation/standalone-deployment/)
 
-Refer to [README](./install/README.md) in the `/install` folder of this repo for the detailed installation instructions.
+Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure **AI Platform Pipelines**.
 
 ## Building and deploying 
 
