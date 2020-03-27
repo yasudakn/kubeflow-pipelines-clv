@@ -30,7 +30,9 @@ _BUCKET_NAME | The name of a GCP bucket in your project to store compiled pipeli
 _PIPELINES_FOLDER | The name of the folder in _BUCKET_NAME to store the compiled pipelines
 _ARTIFACTS_FOLDER | The name of the folder in _BUCKET_NAME to store artificats used by the pipelines at running time. 
 _SAMPLE_DATASET_FOLDER | The name of the folder in _BUCKET_NAME to store the sample dataset used by the pipelines.
-_ENDPOINT | The endpoint to your AI Platform Pipelines instance.
+_ENDPOINT | The endpoint to your AI Platform Pipelines instance. The endpoint to the AI Platform Pipelines instance can be found on the [AI Platform Pipelines](https://console.cloud.google.com/ai-platform/pipelines/clusters) page in the Google Cloud Console.
+1. Open the *SETTINGS* for your instance
+2. Use the value of the `host` variable in the *Connect to this Kubeflow Pipelines instance from a Python client via Kubeflow Pipelines SKD* section of the *SETTINGS* window.|
 
 
 The `/cloud-build/build.sh` demonstrates how to use `gcloud builds submit` to start the build process. 
