@@ -16,7 +16,7 @@ The below diagram depicts the high level architecture:
 
 
 
-Refer to [README](./pipelines/README.md) in the `/pipelines` folder of this repo for more details on the design and usage the training and deployment pipelines.
+Refer to [README](./pipelines/README.md) in the `/pipelines` folder of this repo for more details on the design and usage of the training and deployment pipelines.
 
 Refer to [README](./components/automl_tables/README.md) in the `/components/automl_tables` folder of this repo for more details on the design and usage of the AutoML Tables components.
 
