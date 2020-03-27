@@ -31,5 +31,5 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
   --member serviceAccount:$CLOUD_BUILD_SERVICE_ACCOUNT \
   --role roles/editor
 ```
-5. Create an instance of **AI Platform Pipelines**. Follow the [Setting up AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs/setting-up) how-to guide. Make sure to enable the access to *https://www.googleapis.com/auth/cloud-platform* when creating a GKE cluster.
+5. Create an instance of **AI Platform Pipelines**. Follow the [Setting up AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs/setting-up) how-to guide. Make sure to enable the access to `https://www.googleapis.com/auth/cloud-platform` when creating a GKE cluster.
 
