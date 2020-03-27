@@ -59,7 +59,7 @@ steps:
     gsutil cp gs://clv-datasets/transactions/* gs://$_BUCKET_NAME/$_SAMPLE_DATASET_FOLDER 
   dir: 'pipelines'
 
-
+# Upload the pipeline packages to AI Platform Pipelines
 - name: 'kfp-builder'
   args:
   - '-c'
