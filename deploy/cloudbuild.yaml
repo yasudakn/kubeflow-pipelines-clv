@@ -67,8 +67,8 @@ steps:
   args:
   - '-c'
   - |
-    python kfp-cli.py upload_pipeline --pipeline_package_path=../pipelines/${_TRAIN_PIPELINE}.tar.gz --pipeline_name=${_TRAIN_PIPELINE}
-    python kfp-cli.py upload_pipeline --pipeline_package_path=../pipelines/${_PREDICT_PIPELINE}.tar.gz --pipeline_name=${_PREDICT_PIPELINE}
+    kfp --endpoint $_ENDPOINT pipeline upload -p ${_TRAIN_PIPELINE} ${_TRAIN_PIPELINE}.tar.gz
+    kfp --endpoint $_ENDPOINT pipeline upload -p ${PREDICT_PIPELINE} ${_PREDICT_PIPELINE}.tar.gz
   dir: 'run'
 
 images: ['gcr.io/$PROJECT_ID/${_BASE_IMAGE}', 'gcr.io/$PROJECT_ID/${_AUTOML_TABLES_IMAGE}']
