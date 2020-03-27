@@ -2,7 +2,7 @@
 
 1. Select or create a GCP project. You must be [Project Owner](https://cloud.google.com/iam/docs/understanding-roles) to complete the configuration.
 2. Launch [Cloud Shell](https://cloud.google.com/shell/docs/launching-cloud-shell)
-3. Enable Cloud Services utilzed by the pipelines. In addition to the services [enabled by default](https://cloud.google.com/service-usage/docs/enabled-service) you need to enable the following additional services:
+3. Enable Cloud Services utilized by the pipelines. In addition to the services [enabled by default](https://cloud.google.com/service-usage/docs/enabled-service) you need to enable the following additional services:
    - Compute Engine
    - Container Registry
    - Kubernetes Engine
