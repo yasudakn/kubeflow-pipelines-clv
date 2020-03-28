@@ -21,6 +21,12 @@ The example pipelines have been developed and tested on [AI Platform Pipelines](
 
 Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
 
+## Building and deploying the pipelines
+
+The building and deploying of the solution components has been automated using **Cloud Build**. 
+
+Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed deployment instructions.
+
 
 ## Running the pipelines
 
