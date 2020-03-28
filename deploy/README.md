@@ -26,7 +26,7 @@ _AUTOML_TABLES_IMAGE | The name of the image that hosts AutoML Tables components
 _TAG | The tag to apply when building images. Both images will be tagged with the same tag.
 _TRAIN_PIPELINE | The name for the compiled training pipeline. The compiled pipeline is saved as `[_TRAIN_PIPELINE].tar.gz`
 _PREDICT_PIPELINE | The name for the compiled batch predict pipeline. The compiled pipeline will be saved as `[_PREDICT_PIPELINE].tar.gz` |
-_BUCKET_NAME | The name of a GCP bucket in your project to store compiled pipelines and other artifacts used by the pipelines. 
+_BUCKET_NAME | The GCS bucket created during installation of AI Platform Pipelines. The bucket name starts with the `hostedkfp-default-` prefix. 
 _PIPELINES_FOLDER | The name of the folder in _BUCKET_NAME to store the compiled pipelines
 _ARTIFACTS_FOLDER | The name of the folder in _BUCKET_NAME to store artificats used by the pipelines at running time. 
 _SAMPLE_DATASET_FOLDER | The name of the folder in _BUCKET_NAME to store the sample dataset used by the pipelines.
