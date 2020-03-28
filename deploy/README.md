@@ -48,5 +48,5 @@ To build and deploy the solution:
 This folder contains Cloud Build artifacts:
 - `cloudbuild.yaml` - a Cloud Build config file
 - `build.sh` - a bash script template that uses `gcloud builds submit` to configure and start the build
-- `kfp-builder/Dockerfile` - Dockerfile for an image used by the build's custom steps.
+- `kfp-builder/Dockerfile` - Dockerfile for the KFP CLI builder.
 
