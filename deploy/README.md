@@ -20,7 +20,7 @@ The build process goes through the following steps:
 
 You can configure the **Cloud Build** runs by creating a [Cloud Build trigger](https://cloud.google.com/cloud-build/docs/running-builds/create-manage-triggers) or you can start the runs manually using the `gcloud builds submit` command.
 
-The `build.sh` script demonstrates how to use `gcloud builds submit` to start the build process. 
+The `build.sh` script demonstrates how to use the `gcloud builds submit` command to start the build process. 
 
 Make sure to update the `build.sh` with the setting reflecting your environment. Use the the following table as a guideline. 
 
