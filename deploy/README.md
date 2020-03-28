@@ -22,7 +22,7 @@ You can configure the **Cloud Build** runs by creating a [Cloud Build trigger](h
 
 The `build.sh` script demonstrates how to use the `gcloud builds submit` command to start the build process. 
 
-Make sure to update the `build.sh` with the setting reflecting your environment. Use the the following table as a guideline. 
+Make sure to update the `build.sh` with the settings reflecting your environment. Use the the following table as a guideline. 
 
 Parameter | Description 
 -----------|-------------
