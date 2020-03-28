@@ -55,6 +55,7 @@ log_metrics_op = component_store.load_component('aml-log-metrics')
 def clv_train(
     project_id,
     source_gcs_path,
+    staging_gcs_path,
     source_bq_table,
     bq_dataset_name,
     threshold_date,
@@ -102,7 +103,7 @@ def clv_train(
       project_id=project_id,
       dataset_id=prepare_query.outputs['dataset_name'],
       table_id=prepare_query.outputs['table_name'],
-      output_gcs_path='',
+      output_gcs_path=staging_gcs_path,
       dataset_location=dataset_location,
       job_config='')
 
