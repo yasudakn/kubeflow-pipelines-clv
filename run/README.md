@@ -111,6 +111,7 @@ AML_MODEL_ID=[YOUR_MODEL_ID]
 
 DESTINATION_PREFIX=bq://${PROJECT_ID}
 SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/test_transactions.csv
+STAGING_GCS_PATH=${ARTIFACT_STORE_URI}/staging
 SOURCE_BQ_TABLE=""
 BQ_DATASET_NAME=""
 PREDICT_END=2011-12-12
@@ -126,6 +127,7 @@ kfp --endpoint $ENDPOINT run submit \
 -p $PIPELINE_ID \
 project_id=$PROJECT_ID \
 source_gcs_path=$SOURCE_GCS_PATH \
+staging_gcs_path=$STAGING_GCS_PATH \
 source_bq_table=$SOURCE_BQ_TABLE \
 bq_dataset_name=$BQ_DATASET_NAME \
 predict_end=$PREDICT_END \
