@@ -25,7 +25,7 @@ The pipelines orchestrate Google Cloud [BigQuery](https://cloud.google.com/bigqu
 .
 
 
-Refer to [README](./pipelines/README.md) in the `/pipelines` folder for more information on the pipeline design and to [README](./components/automl_components/README.md) in the `/components/automl_components` folder for more information on the custom components utilized by the pipelines.
+Refer to [README](./pipelines/README.md) in the `/pipelines` folder for more information on the pipeline design and to [README](./components/automl_tables/README.md) in the `/components/automl_components` folder for more information on the custom components utilized by the pipelines.
 
 
 
