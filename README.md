@@ -44,11 +44,7 @@ Refer to [README](./deploy/README.md) in the `/deploy` folder  for the detailed 
 
 ## Running the pipelines
 
-There are two ways to run the solution's pipelines:
-- Using Kubeflow Pipelines UI
-- Using KFP SDK
-
-Refer to [README](./run/README.md) in the `/run` folder  for detailed instructions on how to trigger runs.
+Refer to [README](./run/README.md) in the `/run` folder  for detailed instructions on how to trigger pipeline runs.
 
 ## Repository structure
 
