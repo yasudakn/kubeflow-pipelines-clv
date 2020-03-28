@@ -16,8 +16,8 @@ The below diagram depicts the high level architecture of the solution:
 
 ![KFP Runtime](./images/arch-final.png)
 
-The core of the solution is [Kubeflow Pipelines]()
-There are two example **Kubeflow Pipelines (KFP)** pipelines:
+
+The core of the solution are two example **Kubeflow Pipelines (KFP)** pipelines:
 - Continuous training pipeline, and
 - Batch predict pipeline
 
@@ -25,7 +25,7 @@ The pipelines orchestrate Google Cloud [BigQuery](https://cloud.google.com/bigqu
 .
 
 
-Refer to [README](./pipelines/README.md)l in the `/pipelines` folder for more information
+Refer to [README](./pipelines/README.md) in the `/pipelines` folder for more information on the pipeline design and to [README](./components/README.md) in the `/components` folder for more information on the custom components utilized by the pipelines.
 
 
 
