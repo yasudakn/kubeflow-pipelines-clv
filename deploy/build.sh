@@ -13,8 +13,7 @@ _ARTIFACTS_FOLDER=artifacts,\
 _PIPELINES_FOLDER=pipelines,\
 _SAMPLE_DATASET_FOLDER=dataset,\
 _BUCKET_NAME=kfp-clv-artifacts,\
-_CLUSTER_NAME=kfp-clv-gke,\
-_ZONE=us-central1-a
+_ENDPOINT=[ENDPOINT_TO_YOUR_AI_PLATFORM_PIPELINES_INSTANCE]
 
 gcloud builds submit ../ --config cloudbuild.yaml --substitutions $SUBSTITUTIONS
 
