@@ -1,6 +1,6 @@
 # Starting pipeline runs
 
-There are three ways to trigger a KFP pipeline run:
+There are three ways to trigger runs of the example pipelines:
 - Using the Kubeflow Pipelines UI
 - Using the KFP SDK `kfp.Client()` API
 - Using the KFP CLI
