@@ -19,4 +19,4 @@ compiler_settings:
   - ../components/automl_tables/specs
   url_search_prefixes:
   - https://raw.githubusercontent.com/kubeflow/pipelines/0.2.5/components/gcp/
-  use_sa_secret: true
+  use_sa_secret: false
