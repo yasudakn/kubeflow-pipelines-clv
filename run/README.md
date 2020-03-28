@@ -92,6 +92,46 @@ replace_existing_version=$REPLACE_EXISTING_VERSION
 ```
  You can monitor the run using the KFP UI.
 
+### Start a run of the *CLV Batch Predict* pipeline
+
+
+Update the value of PIPELINE_ID. During the build, the default name of the pipeline was set to `predict_pipeline`.
+
+```
+PIPELINE_ID=[TRAINING_PIPELINE_ID]
+```
+
+Set the name of an experiment to use for the run, the run ID, and the pipeline's runtime parameters.
+```
+EXPERIMENT_NAME = 'CLV_Batch_Predict'
+RUN_ID = 'Run_001'
+
+SOURCE_TABLE = 'covertype_dataset.covertype'
+DATASET_ID = 'splits'
+EVALUATION_METRIC = 'accuracy'
+EVALUATION_METRIC_THRESHOLD = '0.69'
+MODEL_ID = 'covertype_classifier'
+VERSION_ID = 'v01'
+REPLACE_EXISTING_VERSION = 'True'
+GCS_STAGING_PATH = '{}/staging'.format(ARTIFACT_STORE_URI)
+```
+
+Start the run
+```
+kfp --endpoint $ENDPOINT run submit \
+-e $EXPERIMENT_NAME \
+-r $RUN_ID \
+-p $PIPELINE_ID \
+project_id=$PROJECT_ID \
+gcs_root=$GCS_STAGING_PATH \
+region=$REGION \
+source_table_name=$SOURCE_TABLE \
+dataset_id=$DATASET_ID \
+evaluation_metric_name=$EVALUATION_METRIC \
+evaluation_metric_threshold=$EVALUATION_METRIC_THRESHOLD \
+model_id=$MODEL_ID \
+version_id=$VERSION_ID \
+replace_existing_version=$REPLACE_EXISTING_VERSION
 
 ### Running the pipelines using KFP SDK
 
