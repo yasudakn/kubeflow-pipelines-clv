@@ -64,6 +64,8 @@ EXPERIMENT_NAME=CLV_Training
 RUN_ID=Run_001
 
 SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/transactions.csv
+SOURCE_BQ_TABLE=""
+BQ_DATASET_NAME=""
 TRANSACTION_TABLE_NAME=transactions
 FEATURES_TABLE_NAME=features
 PREDICT_END=2011-12-12
@@ -79,6 +81,8 @@ kfp --endpoint $ENDPOINT run submit \
 -p $PIPELINE_ID \
 project_id=$PROJECT_ID \
 source_gcs_path=$SOURCE_GCS_PATH \
+source_bq_table=$SOURCE_BQ_TABLE \
+bq_dataset_name=$BQ_DATASET_NAME \
 transactions_table_name=$TRANSACTION_TABLE_NAME \
 features_table_name=$FEATURES_TABLE_NAME \
 predict_end=$PREDICT_END \
