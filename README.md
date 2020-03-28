@@ -23,19 +23,11 @@ You can run also run the pipelines on a full [Kubeflow](https://www.kubeflow.org
 
 Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
 
-## Building and deploying 
+## Deploying and running the CLV pipelines
 
-The deployment of the example pipelines has been automated using **Cloud Build**. 
+The `deploy_run.ipynb` notebook in the `./run` folder demonstrates how to deploy the pipelines to **AI Platform Pipelines** and how to trigger pipeline runs using Kubeflow Pipelines SDK CLI.
 
-Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed deployment instructions.
-
-## Running the pipelines
-
-There are two ways to run the solution's pipelines:
-- Using Kubeflow Pipelines UI
-- Using KFP SDK
-
-Refer to [README](./run/README.md) in the `/run` folder of this repo for detailed instructions on how to trigger runs.
+Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed instructions.
 
 ## Repository structure
 
