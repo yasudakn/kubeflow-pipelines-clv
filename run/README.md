@@ -3,7 +3,7 @@
 There are three ways to trigger runs of the example pipelines:
 - Using the Kubeflow Pipelines UI
 - Using the KFP SDK `kfp.Client()` API
-- Using the KFP CLI
+- Using the KFP CLI tool
 
 ### Running the pipelines using Kubeflow Pipelines UI
 
