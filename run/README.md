@@ -32,6 +32,13 @@ Most of the parameters have reasonable default values that don't have to be modi
 
 The [KFP CLI tool](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) enables you to use a subset of the Kubeflow Pipelines SDK directly from the command line. 
 
+To start a run of the *CLV Continuous Training* pipeline:
+```
+```
+
+To start a run of the *CLV Batch Predict* pipeline:
+```
+```
 
 
 ### Running the pipelines using KFP SDK
