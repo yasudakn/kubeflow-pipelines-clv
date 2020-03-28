@@ -39,7 +39,7 @@ The `/cloud-build/build.sh` demonstrates how to use `gcloud builds submit` to st
 To build and deploy the CLV pipelines:
 1. Open [Cloud Shell](https://cloud.google.com/shell/docs/) in your project.
 2. Clone this repo.
-3. Update `build.sh` with your settings. You must update the `_ENDPOINT` variable wit the endpoint of your **AI Platform Pipelines** instance. Updating the other settings is optional.
+3. Update the `build.sh` script with your settings. You must update the `_ENDPOINT` variable wit the endpoint of your **AI Platform Pipelines** instance. Updating the other settings is optional.
 4. Execute `build.sh`.
 
 
