@@ -2,7 +2,7 @@
 
 ## Building and deploying the pipelines
 
-The process of building and deploying the pipelines and pipeline components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/). The **Cloud Build** configuration is defined in the `cloudbuild.yaml` file.
+The process of building and deploying the pipelines and pipeline components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/). The **Cloud Build** configuration is defined in the [cloudbuild.yaml](cloudbuild.yaml) file.
 
 The build process goes through the following steps:
 1. Create a docker image to support custom build steps
