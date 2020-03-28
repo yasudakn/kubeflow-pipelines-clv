@@ -60,8 +60,8 @@ PIPELINE_ID=[TRAINING_PIPELINE_ID]
 
 Set the name of an experiment to use for the run, the run ID, and the pipeline's runtime parameters.
 ```
-EXPERIMENT_NAME = 'CLV_Training'
-RUN_ID = 'Run_001'
+EXPERIMENT_NAME=CLV_Training
+RUN_ID=Run_001
 
 SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/transactions.csv
 TRANSACTION_TABLE_NAME=transactions
@@ -83,8 +83,7 @@ transactions_table_name=$TRANSACTION_TABLE_NAME \
 features_table_name=$FEATURES_TABLE_NAME \
 predict_end=$PREDICT_END \
 threshold_date=$THRESHOLD_DATE \
-max_monetary=$MAX_MONETARY \
-replace_existing_version=$REPLACE_EXISTING_VERSION
+max_monetary=$MAX_MONETARY 
 ```
  You can monitor the run using the KFP UI.
 
