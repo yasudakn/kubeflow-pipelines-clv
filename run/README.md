@@ -104,11 +104,10 @@ PIPELINE_ID=[PREDICT_PIPELINE_ID]
 
 Set the name of an experiment to use for the run, the run ID, and the pipeline's runtime parameters.
 ```
-EXPERIMENT_NAME = 'CLV_Batch_Predict'
-RUN_ID = 'Run_001'
-
 AML_MODEL_ID=[YOUR_MODEL_ID]
 
+EXPERIMENT_NAME=CLV_Batch_Predict
+RUN_ID=Run_001
 DESTINATION_PREFIX=bq://${PROJECT_ID}
 SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/test_transactions.csv
 STAGING_GCS_PATH=${ARTIFACT_STORE_URI}/staging/features.csv
