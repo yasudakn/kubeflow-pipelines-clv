@@ -10,22 +10,25 @@ The primary goal of the guide is to demonstrate how to orchestrate two Machine L
 - The training and deployment of the Customer Lifetime Value predictive model.
 - Batch inference using the deployed Customer Lifetime Value predictive model.
 
+## Understanding the design of the pipelines
+
 The below diagram depicts the high level architecture:
 
 ![KFP Runtime](./images/arch-final.png)
 
+Refer to [README](./pipelines/README.md)l in the `/pipelines` folder for more information.
 
 ## Deploying Kubeflow Pipelines
 
 The example pipelines have been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
 
-Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
+Refer to [README](./install/README.md) in the `/install` folder  for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
 
 ## Building and deploying the pipelines
 
 The building and deploying of the solution components has been automated using **Cloud Build**. 
 
-Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed deployment instructions.
+Refer to [README](./deploy/README.md) in the `/deploy` folder  for the detailed deployment instructions.
 
 
 ## Running the pipelines
@@ -34,23 +37,20 @@ There are two ways to run the solution's pipelines:
 - Using Kubeflow Pipelines UI
 - Using KFP SDK
 
-Refer to [README](./run/README.md) in the `/run` folder of this repo for detailed instructions on how to trigger runs.
+Refer to [README](./run/README.md) in the `/run` folder  for detailed instructions on how to trigger runs.
 
 ## Repository structure
 
 `/pipelines`
-The source code for two template KFP Pipelines:
-- The pipeline that automates CLV model training and deployment
-- The pipeline that automates batch inference 
-
+The source code for example pipelines.
 
 `/components`
 
-The source code for the KFP components that wrap selected **AutoML Tables** APIs.
+The source code for the custom components used in the pipelines.
 
 `/install`
 
-Kubeflow Pipelines  installation script
+The environment setup instructions
 
 `/deploy`
 
