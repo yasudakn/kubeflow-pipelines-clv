@@ -4,21 +4,28 @@
 
 This repository maintains code samples accompanying the **Predicting Customer Lifetime Value with Kubeflow Pipelines** reference guide.
 
-The **Predicting Customer Lifetime Value** reference guide discusses operationalization of Customer Lifetime Value (CLV) modeling techniques described in the [Predicting Customer Lifetime Value with AI Platform](https://cloud.google.com/solutions/machine-learning/clv-prediction-with-offline-training-intro) series of articles.
+The **Predicting Customer Lifetime Value** reference guide discusses operationalization of Customer Lifetime Value (CLV) modeling techniques described in the [Predicting Customer Lifetime Value with AI Platform](https://cloud.google.com/solutions/machine-learning/clv-prediction-with-offline-training-intro) series of articles, using [Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/).
 
 The primary goal of the guide is to demonstrate how to orchestrate two Machine Learning workflows:
 - The training and deployment of the Customer Lifetime Value predictive model.
 - Batch inference using the deployed Customer Lifetime Value predictive model.
 
-## Understanding the design of the pipelines
+## Understanding the design 
 
-The below diagram depicts the high level architecture:
+The below diagram depicts the high level architecture of the solution:
 
 ![KFP Runtime](./images/arch-final.png)
 
-There are two example pipelines 
+The core of the solution is [Kubeflow Pipelines]()
+There are two example **Kubeflow Pipelines (KFP)** pipelines:
+- Continuous training pipeline, and
+- Batch predict pipeline
 
-Refer to [README](./pipelines/README.md)l in the `/pipelines` folder for more information.
+The pipelines orchestrate Google Cloud [BigQuery](https://cloud.google.com/bigquery) and [AutoML Tables](https://cloud.google.com/automl-tables) services. **BigQuery** is used for data preprocessing and feature engineering and **AutoML Tables** for model training and inference. The pipelines utilize both built-in and custom KFP components.
+.
+
+
+Refer to [README](./pipelines/README.md)l in the `/pipelines` folder for more information
 
 
 
