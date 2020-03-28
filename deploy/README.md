@@ -22,6 +22,8 @@ You can configure the **Cloud Build** runs by creating a [Cloud Build trigger](h
 
 The `build.sh` script demonstrates how to use the `gcloud builds submit` command to start the build process. 
 
+You need an environment with [Google Cloud SDK](https://cloud.google.com/sdk) to run the `build.sh` script. You can use [Cloud Shell](https://cloud.google.com/shell/docs) or you workstation. **Cloud Shell** is preconfigured with **Google Cloud SDK**. If you prefer to use your workstation you need to [install and configure Google Cloud SDK](https://cloud.google.com/sdk/install).
+
 Make sure to update the `build.sh` with the settings reflecting your environment. Use the the following table as a guideline. 
 
 Parameter | Description 
