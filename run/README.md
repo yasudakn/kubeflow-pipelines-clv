@@ -63,14 +63,12 @@ Set the name of an experiment to use for the run, the run ID, and the pipeline's
 EXPERIMENT_NAME = 'CLV_Training'
 RUN_ID = 'Run_001'
 
-SOURCE_TABLE = 'covertype_dataset.covertype'
-DATASET_ID = 'splits'
-EVALUATION_METRIC = 'accuracy'
-EVALUATION_METRIC_THRESHOLD = '0.69'
-MODEL_ID = 'covertype_classifier'
-VERSION_ID = 'v01'
-REPLACE_EXISTING_VERSION = 'True'
-GCS_STAGING_PATH = '{}/staging'.format(ARTIFACT_STORE_URI)
+SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/transactions.csv
+TRANSACTION_TABLE_NAME=transactions
+FEATURES_TABLE_NAME=features
+PREDICT_END=2011-12-12
+THRESHOLD_DATE=2011-08-08
+MAX_MONETARY=15000
 ```
 
 Start the run
@@ -80,14 +78,12 @@ kfp --endpoint $ENDPOINT run submit \
 -r $RUN_ID \
 -p $PIPELINE_ID \
 project_id=$PROJECT_ID \
-gcs_root=$GCS_STAGING_PATH \
-region=$REGION \
-source_table_name=$SOURCE_TABLE \
-dataset_id=$DATASET_ID \
-evaluation_metric_name=$EVALUATION_METRIC \
-evaluation_metric_threshold=$EVALUATION_METRIC_THRESHOLD \
-model_id=$MODEL_ID \
-version_id=$VERSION_ID \
+source_gcs_path=$SOURCE_GCS_PATH \
+transactions_table_name=$TRANSACTION_TABLE_NAME \
+features_table_name=$FEATURES_TABLE_NAME \
+predict_end=$PREDICT_END \
+threshold_date=$THRESHOLD_DATE \
+max_monetary=$MAX_MONETARY \
 replace_existing_version=$REPLACE_EXISTING_VERSION
 ```
  You can monitor the run using the KFP UI.
@@ -132,6 +128,7 @@ evaluation_metric_threshold=$EVALUATION_METRIC_THRESHOLD \
 model_id=$MODEL_ID \
 version_id=$VERSION_ID \
 replace_existing_version=$REPLACE_EXISTING_VERSION
+```
 
 ### Running the pipelines using KFP SDK
 
