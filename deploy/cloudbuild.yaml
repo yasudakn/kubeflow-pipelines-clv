@@ -55,7 +55,7 @@ steps:
   - |
     kfp --endpoint $_ENDPOINT pipeline upload -p ${_TRAIN_PIPELINE} ${_TRAIN_PIPELINE}.tar.gz
     kfp --endpoint $_ENDPOINT pipeline upload -p ${_PREDICT_PIPELINE} ${_PREDICT_PIPELINE}.tar.gz
-  dir: 'run'
+  dir: 'pipelines'
 
 # Copy build artifacts to GCS bucket
 - name: 'gcr.io/cloud-builders/gsutil'
