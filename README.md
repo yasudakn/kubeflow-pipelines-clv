@@ -45,13 +45,9 @@ The source code for the KFP components that wrap selected **AutoML Tables** APIs
 
 Kubeflow Pipelines  installation script
 
-`/deploy`
-
-Cloud Build configuration for automated building and deployment.
-
 `/run`
 
-Sample code demonstrating how to use the `kfp.Client()` programmatic interface to KFP services.
+The instructions on how to deploy the pipelines to AI Platform Pipelines and how to trigger pipeline runs.
 
 
 
