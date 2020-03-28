@@ -21,11 +21,14 @@ The example pipelines have been developed and tested on [AI Platform Pipelines](
 
 Refer to [README](./install/README.md) in the `/install` folder of this repo for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
 
-## Deploying and running the CLV pipelines
 
-The `deploy_run.ipynb` notebook in the `./run` folder demonstrates how to deploy the pipelines to **AI Platform Pipelines** and how to trigger pipeline runs using Kubeflow Pipelines SDK CLI.
+## Running the pipelines
 
-Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed instructions.
+There are two ways to run the solution's pipelines:
+- Using Kubeflow Pipelines UI
+- Using KFP SDK
+
+Refer to [README](./run/README.md) in the `/run` folder of this repo for detailed instructions on how to trigger runs.
 
 ## Repository structure
 
@@ -43,9 +46,13 @@ The source code for the KFP components that wrap selected **AutoML Tables** APIs
 
 Kubeflow Pipelines  installation script
 
+`/deploy`
+
+Cloud Build configuration for automated building and deployment.
+
 `/run`
 
-The instructions on how to deploy the pipelines to AI Platform Pipelines and how to trigger pipeline runs.
+Sample code demonstrating how to use the `kfp.Client()` programmatic interface to KFP services.
 
 
 
