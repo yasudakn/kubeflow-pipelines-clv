@@ -2,7 +2,9 @@
 
 ## Building and deploying the pipelines
 
-The process of building and deploying the pipelines and pipeline components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/).  The build process goes through the following steps:
+The process of building and deploying the pipelines and pipeline components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/). 
+
+The build process goes through the following steps:
 1. Create a docker image to support custom build steps
 1. Build the base image for the lightweigh Python helper components. The name of the image is provided as a build parameter.
 1. Build the image that hosts AutoML Tables components. The name of the image is provided as a build parameter.
@@ -16,7 +18,6 @@ The process of building and deploying the pipelines and pipeline components have
 1. Deploy compiled pipelines to your AI Platform Pipelines instance. 
 
 
-### Build parameters
 You can use the `gcloud builds submit` command's `--substitutions` option to set the parameters of the build.
 
 Parameter | Description 
