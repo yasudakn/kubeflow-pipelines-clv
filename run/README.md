@@ -1,14 +1,11 @@
-## Running the solution's pipelines
+# Starting pipeline runs
 
-There are two ways of triggering a KFP pipeline run:
+There are three ways to trigger a KFP pipeline run:
 - Using the Kubeflow Pipelines UI
-- Using the KFP SDK
+- Using the KFP SDK `kfp.Client()` API
+- Using the KFP CLI
 
 ### Running the pipelines using Kubeflow Pipelines UI
-
-If you provisioned the lightweight Kubeflow Pipelines deployment, the KFP UI is available at the URL that can be retrieved using the following command:
-
-`echo "https://"$(kubectl describe configmap inverse-proxy-config -n kubeflow | grep "googleusercontent.com")`
 
 Use the procedure described in [Pipelines Quickstart](https://www.kubeflow.org/docs/pipelines/pipelines-quickstart/) to create experiments and submit pipeline runs.
 
@@ -32,6 +29,7 @@ Most of the parameters have reasonable default values that don't have to be modi
 
 ### Running the pipelines using KFP SDK
 
+You can use the `kfp.Client()` API from the [KFP SDK](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) to upload pipelines to a KFP environment, create experiments, and start runs.
 
 This folder contains a sample Python script demonstrating how to use `kfp.Client()` API from the KFP SDK to configure experiments, upload pipelines, and submit pipeline runs programmatically.
 
