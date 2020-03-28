@@ -18,7 +18,10 @@ The build process goes through the following steps:
 1. Deploy compiled pipelines to your AI Platform Pipelines instance. 
 
 
-You can use the `gcloud builds submit` command's `--substitutions` option to set the parameters of the build.
+You can configure the build runs by creating a [Cloud Build trigger](https://cloud.google.com/cloud-build/docs/running-builds/create-manage-triggers) or you can start the runs manually using the `gcloud builds submit` command.
+
+
+s `--substitutions` option to set the parameters of the build.
 
 Parameter | Description 
 -----------|-------------
