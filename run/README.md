@@ -30,7 +30,7 @@ Most of the parameters have reasonable default values that don't have to be modi
 
 ### Running the pipelines using the KFP CLI tool
 
-
+The [KFP CLI tool](https://www.kubeflow.org/docs/pipelines/sdk/sdk-overview/) enables you to use a subset of the Kubeflow Pipelines SDK directly from the command line. 
 
 
 
