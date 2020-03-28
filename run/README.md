@@ -64,6 +64,7 @@ EXPERIMENT_NAME=CLV_Training
 RUN_ID=Run_001
 
 SOURCE_GCS_PATH=${ARTIFACT_STORE_URI}/dataset/transactions.csv
+STAGING_GCS_PATH=${ARTIFACT_STORE_URI}/staging
 SOURCE_BQ_TABLE=""
 BQ_DATASET_NAME=""
 TRANSACTION_TABLE_NAME=transactions
@@ -81,6 +82,7 @@ kfp --endpoint $ENDPOINT run submit \
 -p $PIPELINE_ID \
 project_id=$PROJECT_ID \
 source_gcs_path=$SOURCE_GCS_PATH \
+staging_gcs_path=$STAGING_GCS_PATH \
 source_bq_table=$SOURCE_BQ_TABLE \
 bq_dataset_name=$BQ_DATASET_NAME \
 transactions_table_name=$TRANSACTION_TABLE_NAME \
