@@ -44,6 +44,6 @@ _ENDPOINT | The endpoint to your AI Platform Pipelines instance. The endpoint to
 
 This folder contains Cloud Build artifacts:
 - `cloudbuild.yaml` - a Cloud Build config file
-- `build.sh` - a bash script template that uses `gcloud builds submit` to configure and start the build
+- `build.sh` - a bash script template that demonstrates how to use the  `gcloud builds submit` command to configure and start the build process
 - `kfp-builder/Dockerfile` - Dockerfile for the KFP CLI builder utilized by the `cloudbuild.yaml` workflow.
 
