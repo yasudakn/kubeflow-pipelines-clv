@@ -4,61 +4,60 @@
 
 This repository maintains code samples accompanying the **Predicting Customer Lifetime Value with Kubeflow Pipelines** reference guide.
 
-The **Predicting Customer Lifetime Value** reference guide  discusses operationalization of Customer Lifetime Value (CLV) modeling techniques described in the [Predicting Customer Lifetime Value with AI Platform](https://cloud.google.com/solutions/machine-learning/clv-prediction-with-offline-training-intro) series of articles.
+The **Predicting Customer Lifetime Value** reference guide discusses operationalization of Customer Lifetime Value (CLV) modeling techniques described in the [Predicting Customer Lifetime Value with AI Platform](https://cloud.google.com/solutions/machine-learning/clv-prediction-with-offline-training-intro) series of articles, using [Kubeflow Pipelines](https://www.kubeflow.org/docs/pipelines/overview/pipelines-overview/).
 
 The primary goal of the guide is to demonstrate how to orchestrate two Machine Learning workflows:
 - The training and deployment of the Customer Lifetime Value predictive model.
 - Batch inference using the deployed Customer Lifetime Value predictive model.
 
-The below diagram depicts the high level architecture:
+## Understanding the design 
+
+The below diagram depicts the high level architecture of the solution:
 
 ![KFP Runtime](./images/arch-final.png)
 
 
-The Kubeflow Pipelines services are hosted on **Google Kubernetes Engine** running on Google Cloud Platform. The training and inference pipelines access **BigQuery**,  **AutoML Tables** services through a set of Kubeflow Pipelines components that wrap the respective **Google Cloud APIs**. The container images for the components utilized by the pipelines are managed in **Container Registry**.
+The core of the solution are two example **Kubeflow Pipelines (KFP)** pipelines:
+- Continuous training pipeline, and
+- Batch predict pipeline
 
-Refer to [README](./pipelines/README.md) in the `/pipelines` folder of this repo for more details on the design and usage the training and deployment pipelines.
+The pipelines orchestrate Google Cloud [BigQuery](https://cloud.google.com/bigquery) and [AutoML Tables](https://cloud.google.com/automl-tables) services. **BigQuery** is used for data preprocessing and feature engineering and **AutoML Tables** for model training and inference. The pipelines utilize both built-in and custom KFP components.
+.
 
-Refer to [README](./components/automl_tables/README.md) in the `/components/automl_tables` folder of this repo for more details on the design and usage of the AutoML Tables components.
+
+Refer to [README](./pipelines/README.md) in the `/pipelines` folder for more information on the pipeline design and to [README](./components/automl_tables/README.md) in the `/components/automl_components` folder for more information on the custom components utilized by the pipelines.
 
 
-## Installing Kubeflow Pipelines
 
-The guide has been developed and tested on Kubeflow Pipelines on Google Cloud Platform Kubernetes Engine (GKE). 
+## Deploying Kubeflow Pipelines
 
-You can run the solution on a full **Kubeflow** installation  or on a lightweight deployment that only includes core Kubeflow Pipelines services. The full Kubeflow installation can be provisioned following [the Kubeflow on GCP guide](https://www.kubeflow.org/docs/gke/deploy/). The lightweight Kubeflow Pipelines deployment can be performed using the automation script delivered as a part of the guide.
+The example pipelines have been developed and tested on [AI Platform Pipelines](https://cloud.google.com/ai-platform/pipelines/docs). 
 
-Refer to [README](./install/README.md) in the `/install` folder of this repo for the detailed installation instructions.
+Refer to [README](./install/README.md) in the `/install` folder  for the instructions on how to deploy and configure an **AI Platform Pipelines** instance.
 
-## Building and deploying 
+## Building and deploying the pipelines
 
 The building and deploying of the solution components has been automated using **Cloud Build**. 
 
-Refer to [README](./deploy/README.md) in the `/deploy` folder of this repo for the detailed deployment instructions.
+Refer to [README](./deploy/README.md) in the `/deploy` folder  for the detailed deployment instructions.
+
 
 ## Running the pipelines
 
-There are two ways to run the solution's pipelines:
-- Using Kubeflow Pipelines UI
-- Using KFP SDK
-
-Refer to [README](./run/README.md) in the `/run` folder of this repo for detailed instructions on how to trigger runs.
+Refer to [README](./run/README.md) in the `/run` folder  for detailed instructions on how to trigger pipeline runs.
 
 ## Repository structure
 
 `/pipelines`
-The source code for two template KFP Pipelines:
-- The pipeline that automates CLV model training and deployment
-- The pipeline that automates batch inference 
-
+The source code for example pipelines.
 
 `/components`
 
-The source code for the KFP components that wrap selected **AutoML Tables** APIs.
+The source code for the custom components used in the pipelines.
 
 `/install`
 
-Kubeflow Pipelines  installation script
+The environment setup instructions
 
 `/deploy`
 

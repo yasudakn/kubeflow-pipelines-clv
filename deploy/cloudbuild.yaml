@@ -48,6 +48,15 @@ steps:
     dsl-compile --py  batch_predict_pipeline.py --output ${_PREDICT_PIPELINE}.tar.gz --disable-type-check
   dir: 'pipelines'
 
+# Upload the pipeline packages to AI Platform Pipelines
+- name: 'kfp-builder'
+  args:
+  - '-c'
+  - |
+    kfp --endpoint $_ENDPOINT pipeline upload -p ${_TRAIN_PIPELINE} ${_TRAIN_PIPELINE}.tar.gz
+    kfp --endpoint $_ENDPOINT pipeline upload -p ${_PREDICT_PIPELINE} ${_PREDICT_PIPELINE}.tar.gz
+  dir: 'pipelines'
+
 # Copy build artifacts to GCS bucket
 - name: 'gcr.io/cloud-builders/gsutil'
   entrypoint: 'bash'
@@ -58,18 +67,6 @@ steps:
     gsutil cp artifacts/query_template.sql.jinja gs://$_BUCKET_NAME/$_ARTIFACTS_FOLDER/query_template.sql.jinja 
     gsutil cp gs://clv-datasets/transactions/* gs://$_BUCKET_NAME/$_SAMPLE_DATASET_FOLDER 
   dir: 'pipelines'
-
-# Upload compiled pipelines to the KFP cluster
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['container', 'clusters', 'get-credentials', '$_CLUSTER_NAME', '--zone', '$_ZONE']
-
-- name: 'kfp-builder'
-  args:
-  - '-c'
-  - |
-    python kfp-cli.py upload_pipeline --pipeline_package_path=../pipelines/${_TRAIN_PIPELINE}.tar.gz --pipeline_name=${_TRAIN_PIPELINE}
-    python kfp-cli.py upload_pipeline --pipeline_package_path=../pipelines/${_PREDICT_PIPELINE}.tar.gz --pipeline_name=${_PREDICT_PIPELINE}
-  dir: 'run'
 
 images: ['gcr.io/$PROJECT_ID/${_BASE_IMAGE}', 'gcr.io/$PROJECT_ID/${_AUTOML_TABLES_IMAGE}']
 
