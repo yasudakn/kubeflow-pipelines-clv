@@ -48,25 +48,15 @@ Refer to [README](./run/README.md) in the `/run` folder  for detailed instructio
 
 ## Repository structure
 
-`/pipelines`
-The source code for example pipelines.
+`/pipelines` -The source code for example pipelines.
 
-`/components`
+`/components` - The source code for the custom components used in the pipelines.
 
-The source code for the custom components used in the pipelines.
+`/install` - The environment setup instructions
 
-`/install`
+`/deploy` - Cloud Build configuration for automated building and deployment.
 
-The environment setup instructions
-
-`/deploy`
-
-Cloud Build configuration for automated building and deployment.
-
-`/run`
-
-Sample code demonstrating how to use the `kfp.Client()` programmatic interface to KFP services.
-
+`/run` - Instruction to start pipeline runs.
 
 
 ## Acknowledgements
