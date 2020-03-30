@@ -2,23 +2,20 @@
 
 ## Building and deploying the pipelines
 
-The process of building and deploying the pipelines and pipeline components has been automated using [Cloud Build](https://cloud.google.com/cloud-build/docs/). The **Cloud Build** configuration is defined in the [cloudbuild.yaml](cloudbuild.yaml) file.
-
-The build process goes through the following steps:
-1. Create a docker image to support custom build steps
-1. Build the base image for the lightweigh Python helper components. The name of the image is provided as a build parameter.
-1. Build the image that hosts AutoML Tables components. The name of the image is provided as a build parameter.
-1. Update the YAML specifications of the AutoML Tables components with the names of images the created  in the previous step.
-1. Update the settings that control compilation. The values for these settings are provided as build parameters.
-1. Compile the pipelines. 
-1. Deploy the compiled pipelines to a GCS location. The path to the location is provided as a build parameter.
-1. Deploy the artifacts used by the pipelines to a GCS location. The path to the location is provided as a build parameter.
-1. Deploy the component images to the Container Registry of your project. 
-1. Copy the sample dataset to a GCS location. The path to the location is provided as a build parameter.
-1. Deploy compiled pipelines to your AI Platform Pipelines instance. 
-
-
 You can configure the **Cloud Build** runs by creating a [Cloud Build trigger](https://cloud.google.com/cloud-build/docs/running-builds/create-manage-triggers) or you can start the runs manually using the `gcloud builds submit` command.
+=======
+Building and deploying of the pipelines and components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/).  The build process goes through the following steps:
+1. Creates a docker image to support custom build steps
+1. Builds the base image for the lightweigh Python helper components. The name of the image is provided as a build parameter.
+1. Builds the image that hosts AutoML Tables components. The name of the image is provided as a build parameter.
+1. Updates the YAML specifications of the AutoML Tables components with the names of the created images in the previous step
+1. Updates the settings that control the pipelines' compilation. The values for these settings are provided as build parameters.
+1. Compiles the pipelines. 
+1. Deploys the compiled pipelines to a GCS location. The path to the location is provided as a build parameter.
+1. Deploys the artifacts used by the pipelines to a GCS location. The path to the location is provided as a build parameter.
+1. Deploys the component images to the Container Registry of your project. 
+1. Copies the sample dataset to a GCS location. The path to the location is provided as a build parameter.
+1. Deploys compiled pipelines to the KFP GKE cluster. The cluster name and location are provided as build parameters.
 
 The `build.sh` script demonstrates how to use the `gcloud builds submit` command to start the build process. 
 
