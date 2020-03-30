@@ -1,10 +1,6 @@
+# Building and deploying the pipelines
 
-
-## Building and deploying the pipelines
-
-You can configure the **Cloud Build** runs by creating a [Cloud Build trigger](https://cloud.google.com/cloud-build/docs/running-builds/create-manage-triggers) or you can start the runs manually using the `gcloud builds submit` command.
-=======
-Building and deploying of the pipelines and components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/).  The build process goes through the following steps:
+Building and deploying of the pipelines and pipeline components have been automated using [GCP Cloud Build](https://cloud.google.com/cloud-build/docs/).  The build process goes through the following steps:
 1. Creates a docker image to support custom build steps
 1. Builds the base image for the lightweigh Python helper components. The name of the image is provided as a build parameter.
 1. Builds the image that hosts AutoML Tables components. The name of the image is provided as a build parameter.
