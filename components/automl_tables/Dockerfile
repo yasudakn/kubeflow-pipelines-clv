@@ -1,6 +1,6 @@
 FROM python:3.6-slim-jessie
 
-RUN pip install  google-cloud-storage google-cloud-automl grpcio fire
+RUN pip install  google-cloud-storage==1.33.0 google-cloud-automl==1.0.1 grpcio==1.34.0 fire==0.3.1
 
 RUN mkdir /ml
 RUN mkdir /ml/common /ml/batch_predict /ml/deploy_model /ml/import_dataset /ml/launcher /ml/train_model /ml/log_evaluation_metrics
